@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首頁</title>
+
+    
+    <!-- style -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="chrome-extension://kapnjjcfcncngkadhpmijlkblpibdcgm/css/resizer.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="./assets/style/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.gridster/0.5.6/jquery.gridster.min.css">
+
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <!-- <script src="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.11/iframeResizer.contentWindow.min.js"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="./assets/js/jquery.gridster.min.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.gridster/0.5.6/jquery.gridster.min.js"></script> -->
+    <script type="text/javascript" charset="utf-8" src="http://dsmorse.github.io/gridster.js/dist/jquery.gridster.min.js"></script>
+    <!-- <script type="text/javascript" charset="utf-8" src="./assets/js/jquery.gridster.min.js"></script> -->
+
+    
+    <!-- <style id="gridster-stylesheet" type="text/css"> 
+        [data-col="1"] { left:5px; }
+        [data-col="2"] { left:174.33333333333334px; }
+        [data-col="3"] { left:343.6666666666667px; }
+        [data-col="4"] { left:513px; }
+        [data-col="5"] { left:682.3333333333334px; }
+        [data-col="6"] { left:851.6666666666667px; }
+        [data-col="7"] { left:1021px; }
+        [data-row="1"] { top:5px; }
+        [data-row="2"] { top:150px; }
+        [data-row="3"] { top:295px; }
+        [data-row="4"] { top:440px; }
+        [data-row="5"] { top:585px; }
+        [data-row="6"] { top:730px; }
+        [data-row="7"] { top:875px; }
+        [data-row="8"] { top:1020px; }
+        [data-row="9"] { top:1165px; }
+        [data-row="10"] { top:1310px; }
+        [data-row="11"] { top:1455px; }
+        [data-row="12"] { top:1600px; }
+        [data-row="13"] { top:1745px; }
+        [data-row="14"] { top:1890px; }
+        [data-row="15"] { top:2035px; }
+        [data-row="16"] { top:2180px; }
+        [data-sizey="1"] { height:140px; }
+        [data-sizey="2"] { height:285px; }
+        [data-sizey="3"] { height:430px; }
+        [data-sizey="4"] { height:575px; }
+        [data-sizey="5"] { height:720px; }
+        [data-sizey="6"] { height:865px; }
+        [data-sizey="7"] { height:1010px; }
+        [data-sizey="8"] { height:1155px; }
+        [data-sizey="9"] { height:1300px; }
+        [data-sizey="10"] { height:1445px; }
+        [data-sizey="11"] { height:1590px; }
+        [data-sizey="12"] { height:1735px; }
+        [data-sizey="13"] { height:1880px; }
+        [data-sizey="14"] { height:2025px; }
+        [data-sizey="15"] { height:2170px; }
+        [data-sizex="1"] { width:164.33333333333334px; }
+        [data-sizex="2"] { width:333.6666666666667px; }
+        [data-sizex="3"] { width:503px; }
+        [data-sizex="4"] { width:672.3333333333334px; }
+        [data-sizex="5"] { width:841.6666666666667px; }
+        [data-sizex="6"] { width:1011px; }
+    </style> -->
+
+    <!-- <script type="text/javascript">
+        function getRandomInt (min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+    </script> -->
+
+    <script type="text/javascript">
+            
+        var gridster = null;
+        $(document).ready(function () {
+            gridster = $(".gridster ul").gridster({
+                widget_base_dimensions: ['auto', 140],
+                autogenerate_stylesheet: true,
+                min_cols: 1,
+                max_cols: 6,
+                widget_margins: [5, 5],
+                resize: {
+                    enabled: true
+                }
+            }).data('gridster');
+            $('.gridster ul').css({'padding': '0'});
+
+        });
+
+        // var gridster;
+
+        // $(function () {
+
+        //     gridster = $(".gridster ul").gridster({
+        //         widget_base_dimensions: [100, 100],
+        //         widget_margins: [5, 5],
+        //         helper: 'clone',
+        //         resize: {
+        //             enabled: true
+        //         }
+        //     }).data('gridster');
+
+
+        //     $('.js-resize-random').on('click', function () {
+        //         gridster.resize_widget(gridster.$widgets.eq(getRandomInt(0, 9)),
+        //                 getRandomInt(1, 4), getRandomInt(1, 4))
+        //     });
+
+        // });
+
+        //remove
+        $(document).on('click', '.remove', function() {
+            var gridster = $(".gridster ul").gridster().data('gridster');
+            gridster.remove_widget( $(this).parent());
+        });
+        
+
+    </script>
+    
+    
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container-fulid">
+            <a href="" class="logo">
+                <img src="http://220.128.125.40/images/librenms_logo_light.svg" alt="LibreNMS">
+            </a>
+            <nav class="main-nav">
+                <a href="#">line1</a>
+                <a href="#">line2</a>
+                <a href="#">line3</a>
+                <a href="#">line4</a>
+            </nav>
+            <div class="header-account">
+            <ul class="account-lgoinBox">
+                <li>
+                <a href="index.html" class="login dropdown">
+                    <i class="fa fa-user login" aria-hidden="true"></i>admin
+                </a>
+                <ul class="dropdown-open">
+                    <li><a href="#">test3-1</a></li>
+                    <li><a href="#">test3-2</a></li>
+                </ul>
+                </li>
+            </ul>
+            </div>
+            <form class="header-search">
+                <input type="search" name="" id="">
+                <button><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </header>
+    
+
+    
+
+<div class="gridster ready">
+    <ul style="height:440px; min-width:100%; max-width:100%; position:relative; padding:0px;">
+        <li data-sizey="2" data-sizex="2" data-col="4" data-row="1" class="gs-w" style="margin-top: auto; margin-bottom: auto; min-height: auto;">
+            <div class="gridster-box">
+                <div class="handle-resize">
+                    <!-- header -->
+                    <div class="handle-header">
+                        <h5 class="h5">Lorem ipsum dolor</h5>
+                    </div>
+
+                    <!-- main Start -->
+                    <div class="widget_body">
+                        <table id="component-status" class="table table-hover table-condensed table-striped">
+                            <thead>
+                            <tr>
+                                <th data-column-id="status" data-order="desc">Status</th>
+                                <th data-column-id="count">Count</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p class="text-left text-success">確認</p></td>
+                                    <td><p class="text-left text-success">0</p></td>
+                                </tr>
+                                        <tr>
+                                    <td><p class="text-left grey">警告</p></td>
+                                    <td><p class="text-left grey">0</p></td>
+                                </tr>
+                                        <tr>
+                                    <td><p class="text-left text-danger">嚴重</p></td>
+                                    <td><p class="text-left text-danger">0</p></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- main End-->
+
+                </div>
+            </div>
+        <span class="gs-resize-handle gs-resize-handle-both"></span>
+        <button class="remove material-icons box_icon-small">clear</button>
+        <i class="fa fa-arrows-alt" aria-hidden="true"></i></li>
+        <li data-sizey="1" data-sizex="1" data-col="1" data-row="3" class="gs-w" style="margin-top: auto; margin-bottom: auto; min-height: auto;">
+            <div class="gridster-box">
+                <div class="handle-resize">
+                    <!-- header -->
+                    <div class="handle-header">
+                        <h5 class="h5">Lorem ipsum dolor</h5>
+                    </div>
+                    <!-- main Start --><!-- main End-->
+                </div>
+            </div>
+        <span class="gs-resize-handle gs-resize-handle-both"></span>
+        <button class="remove material-icons box_icon-small">clear</button>
+        <i class="fa fa-arrows-alt" aria-hidden="true"></i></li>
+        <li data-sizey="1" data-sizex="1" data-col="2" data-row="3" class="gs-w" style="margin-top: auto; margin-bottom: auto; min-height: auto;">
+            <div class="gridster-box">
+                <div class="handle-resize">
+                    <!-- header -->
+                    <div class="handle-header">
+                        <h5 class="h5">Lorem ipsum dolor</h5>
+                    </div>
+                    <!-- main Start --><!-- main End-->
+                </div>
+            </div>
+        <span class="gs-resize-handle gs-resize-handle-both"></span>
+        <button class="remove material-icons box_icon-small">clear</button>
+        <i class="fa fa-arrows-alt" aria-hidden="true"></i></li>
+        <li data-sizey="2" data-sizex="2" data-col="1" data-row="1" class="gs-w" style="margin-top: auto; margin-bottom: auto; min-height: auto;">
+            <div class="gridster-box">
+                <div class="handle-resize">
+                    <!-- header -->
+                    <div class="handle-header">
+                        <h5 class="h5">Lorem ipsum dolor</h5>
+                    </div>
+                    <!-- main Start --><!-- main End-->
+                </div>
+            </div>
+        <span class="gs-resize-handle gs-resize-handle-both"></span>
+        <button class="remove material-icons box_icon-small">clear</button>
+        <i class="fa fa-arrows-alt" aria-hidden="true"></i></li>
+        <li data-sizey="1" data-sizex="1" data-col="3" data-row="1" class="gs-w" style="margin-top: auto; margin-bottom: auto; min-height: auto;">
+            <div class="gridster-box">
+                <div class="handle-resize">
+                    <!-- header -->
+                    <div class="handle-header">
+                        <h5 class="h5">Lorem ipsum dolor</h5>
+                    </div>
+                    <!-- main Start --><!-- main End-->
+                </div>
+            </div>
+        <span class="gs-resize-handle gs-resize-handle-both"></span>
+        <button class="remove material-icons box_icon-small">clear</button>
+        <i class="fa fa-arrows-alt" aria-hidden="true"></i></li>
+        <li data-sizey="1" data-sizex="1" data-col="3" data-row="3" class="gs-w" style="margin-top: auto; margin-bottom: auto; min-height: auto;">
+            <div class="gridster-box">
+                <div class="handle-resize">
+                    <!-- header -->
+                    <div class="handle-header">
+                        <h5 class="h5">Lorem ipsum dolor</h5>
+                    </div>
+                    <!-- main Start --><!-- main End-->
+                </div>
+            </div>
+        <span class="gs-resize-handle gs-resize-handle-both"></span>
+        <button class="remove material-icons box_icon-small">clear</button>
+        <i class="fa fa-arrows-alt" aria-hidden="true"></i></li>
+        <li data-sizey="1" data-sizex="1" data-col="4" data-row="3" class="gs-w" style="margin-top: auto; margin-bottom: auto; min-height: auto;">
+            <div class="gridster-box">
+                <div class="handle-resize">
+                    <!-- header -->
+                    <div class="handle-header">
+                        <h5 class="h5">Lorem ipsum dolor</h5>
+                    </div>
+                    <!-- main Start --><!-- main End-->
+                </div>
+            </div>
+        <span class="gs-resize-handle gs-resize-handle-both"></span>
+        <button class="remove material-icons box_icon-small">clear</button>
+        <i class="fa fa-arrows-alt" aria-hidden="true"></i></li>
+        <li data-sizey="1" data-sizex="1" data-col="6" data-row="1" class="gs-w" style="margin-top: auto; margin-bottom: auto; min-height: auto;">
+            <div class="gridster-box">
+                <div class="handle-resize">
+                    <!-- header -->
+                    <div class="handle-header">
+                        <h5 class="h5">Lorem ipsum dolor</h5>
+                    </div>
+                    <!-- main Start --><!-- main End-->
+                </div>
+            </div>
+        <span class="gs-resize-handle gs-resize-handle-both"></span>
+        <button class="remove material-icons box_icon-small">clear</button>
+        <i class="fa fa-arrows-alt" aria-hidden="true"></i></li>
+        <li data-sizey="1" data-sizex="1" data-col="5" data-row="3" class="gs-w" style="margin-top: auto; margin-bottom: auto; min-height: auto;">
+            <div class="gridster-box">
+                <div class="handle-resize">
+                    <!-- header -->
+                    <div class="handle-header">
+                        <h5 class="h5">Lorem ipsum dolor</h5>
+                    </div>
+                    <!-- main Start --><!-- main End-->
+                </div>
+            </div>
+        <span class="gs-resize-handle gs-resize-handle-both"></span>
+        <button class="remove material-icons box_icon-small">clear</button>
+        <i class="fa fa-arrows-alt" aria-hidden="true"></i></li>
+        <li data-sizey="1" data-sizex="1" data-col="3" data-row="2" class="gs-w" style="margin-top: auto; margin-bottom: auto; min-height: auto;">
+            <div class="gridster-box">
+                <div class="handle-resize">
+                    <!-- header -->
+                    <div class="handle-header">
+                        <h5 class="h5">Lorem ipsum dolor</h5>
+                    </div>
+                    <!-- main Start --><!-- main End-->
+                </div>
+            </div>
+        <span class="gs-resize-handle gs-resize-handle-both"></span>
+        <button class="remove material-icons box_icon-small">clear</button>
+        <i class="fa fa-arrows-alt" aria-hidden="true"></i></li>
+        <li data-sizey="1" data-sizex="1" data-col="6" data-row="2" class="gs-w" style="margin-top: auto; margin-bottom: auto; min-height: auto;">
+            <div class="gridster-box">
+                <div class="handle-resize">
+                    <!-- header -->
+                    <div class="handle-header">
+                        <h5 class="h5">Lorem ipsum dolor</h5>
+                    </div>
+                    <!-- main Start --><!-- main End-->
+                </div>
+            </div>
+        <span class="gs-resize-handle gs-resize-handle-both"></span>
+        <button class="remove material-icons box_icon-small">clear</button>
+        <i class="fa fa-arrows-alt" aria-hidden="true"></i></li>
+    </ul>
+</div>
+
+
+    
+    
+    
+
+    
+   
+    
+
+</body>
+</html>

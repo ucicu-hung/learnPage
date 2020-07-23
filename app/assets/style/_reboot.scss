@@ -1,0 +1,200 @@
+*,
+*::before, 
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: $font-html-size;
+}
+
+html,body {
+    font-family: $font-body-family;
+    line-height: $font-line-height;
+    // 初始值 16*1.5 = 24px 
+    color: $secondary;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; //解決img的留白2~3px
+}
+
+a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+  
+
+/* 1.fontStyle */
+h1.h1 {
+    font-size: $font-size-lg;
+    font-weight: $font-w-bold;
+}
+  
+h2.title {
+    font-size: $font-size-md;
+    margin-bottom: 60px;
+    color:$primary;
+    font-style: $font-style-normal;
+    font-weight: $font-w-bold;
+}
+
+h2.h2{
+    font-size: $font-size-mdx;
+}
+
+h3.h3 {
+    font-size: $font-size-mdx;
+    color: $primary;
+    margin-bottom: 4px;
+}
+h4.h4{ font-size: $font-size-xs; }
+h5.h5{ font-size: $font-size-xxs;}
+
+/* 2.color */
+.color-primary {
+    color: $primary;
+}
+
+.color-primary-dark {
+    color: $primary-dark;
+}
+
+.color-primary-darker{
+    color: $primary-darker;
+}
+
+.color-primary-light{
+    color: $primary-light;
+}
+
+.color-secondary{
+    color: $secondary;
+}
+
+.color-secondary-light{
+    color: $secondary-light;
+}
+
+.color-secondary-lighter{
+    color: $secondary-lighter;
+}
+
+.bgcolor-fluid {
+    background: $primary;
+}
+
+
+
+/* 3.space */
+.my-1{
+    margin: $my-1 0px;
+}
+.my-2{
+    margin: $my-2 0px;
+}
+.my-3{
+    margin: $my-3 0px;
+}
+//mt
+.mt-1{
+    margin-top: $my-1;
+}
+.mt-2{
+    margin-top: $my-2;
+}
+.mt-3{
+    margin-top: $my-3;
+}
+//mb
+.mb-1{
+    margin-bottom: $my-1;
+}
+.mb-2{
+    margin-bottom: $my-2;
+}
+.mb-3{
+    margin-bottom: $my-3;
+}
+//mx
+.mx-1{
+    margin: 0px $mx-1;
+}
+.mx-2{
+    margin: 0px $mx-2;
+}
+.mx-3{
+    margin: 0px $mx-3;
+}
+
+//p-*
+.py-1{
+    padding: $py-1 0px;
+}
+.py-2{
+    padding: $py-2 0px;
+}
+.py-3{
+    padding: $py-3 0px;
+}
+//pt
+.pt-1{
+    padding-top: $py-1;
+}
+.pt-2{
+    padding-top: $py-2;
+}
+.pt-3{
+    padding-top: $py-3;
+}
+//pb
+.pb-1{
+    padding-bottom: $py-1;
+}
+.pb-2{
+    padding-bottom: $py-2;
+}
+.pb-3{
+    padding-bottom: $py-3;
+}
+//px
+.px-1{
+    padding: 0px $px-1;
+}
+.px-2{
+    padding: 0px $px-2;
+}
+.px-3{
+    padding: 0px $px-3;
+}
+
+
+
+
+
+/* 4. bg-cover */
+.bg-cover {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  
+.bg-contain {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+//positon
+.po-relative{
+    position: relative;
+}
+.po-absolute{
+    position: absolute;
+}
+

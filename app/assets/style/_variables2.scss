@@ -1,0 +1,76 @@
+
+
+// color
+$primary:           #0e0e0e;  
+$primary-light:     #0e0e0ee3;
+$primary-lighter:   #292928;
+$primary-lighted:   darken($primary-lighter, 80%) !default; 
+
+$primary-dark:      #121212;
+$primary-darker:    #2A8356;
+$secondary:         #707070;
+$secondary-light:   #dad7d7;
+$secondary-lighter: #00000062;
+
+$success:           #fbf2f2;
+
+$danger:             rgb(172, 191, 238);
+
+// $gray-darker:   darken($gray-base, 13.5%) !default; 
+// $gray-lighter:  lighten($gray-base, 100%) !default;  
+
+
+// font-family
+$font-body-family: 'Roboto', 'Noto Serif TC', sans-serif, serif;
+$font-html-size: 16px;
+$font-base-size: 1rem;
+$font-line-height: 1.5;
+
+// fontSize
+$font-size1: 16px; //16px;
+$font-size-xxs: ($font-size1 * 1.25); //20px //h5
+$font-size-xs: ($font-size1 * 1.5); //24px; //h4
+$font-size-mdx: ($font-size1 * 2); //32px; //h3
+$font-size-md: ($font-size1 * 3); //48px; //h2
+$font-size-lg: ($font-size1 * 4); //64px; //h1
+
+
+// fontStyle
+$font-style-normal: normal;
+$font-w-bold: bold;
+$font-w-bolder: bolder;
+$font-w-italic: Italic;
+
+
+// fontalign
+$font-align-l: left;
+$font-align-c: center;
+$font-align-r: right;
+
+//m-*
+$my-1: 8px;
+$my-2: 16px;
+$my-3: 24px;
+
+$mx-1: 8px;
+$mx-2: 16px;
+$mx-3: 24px;
+
+//p-*
+$px-1: 8px;
+$px-2: 16px;
+$px-3: 24px;
+
+$py-1: 8px;
+$py-2: 16px;
+$py-3: 24px;
+
+// w-*
+$breakpoint-xl: 1200px;
+$breakpoint-lg: 992px;
+$breakpoint-md: 767px;
+
+// display
+$display-none: none;
+$display-block: block;
+

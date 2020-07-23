@@ -1,0 +1,152 @@
+
+// layout
+// .wrap{
+// 	width: 960px;
+// 	height: 300px;
+// 	margin: 0 auto;
+// }
+
+// .menu{
+// 	float: right;
+// }
+// .menu a{
+// 	text-decoration: none;
+// 	border: 1px solid #ccc;
+// 	color: #000;
+// 	background: #f7f7f7;
+// 	transition: all .3s;
+// 	padding: .5em 0;
+// 	display: block;
+// 	text-align: center;
+// }
+// .menu a:hover{
+// 	background: blue;
+// 	color: #fff;
+// }
+// .menu > li{ /*第一層 li*/
+// 	float: left;
+// 	width: 100px;
+// } 
+// .menu ul{
+// 	display: none;
+// }
+
+
+//header
+.main-header{
+	background: linear-gradient(0deg,#eaeaea, #fff);
+	.container-fulid{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px 30px;
+		//max-width: 100%;
+		width: 100%;
+		margin: 0 auto;
+		.logo{
+			width: auto;  /*100px; */
+			img{
+				width: 100%;
+				vertical-align: middle;
+			}
+		}
+		.main-nav{
+			margin: auto;
+			a{
+				text-decoration: none;
+				color: #707070;
+				padding: 5px 1em;
+				position: relative;
+				/* transform: scaleY(-50px); */
+				&:after{
+					content: "";
+					position: absolute;
+					left:  50%;
+					right:  50%;
+					bottom: -5px;
+					height: 0;
+					border-bottom: 1px solid #707070;
+					transition: 0.3s;
+				}
+				&:hover:after{
+					left: 0;
+					right: 0;
+				}
+			
+			}
+		}
+
+
+		.header-account{
+			padding-right: 10px;
+			.account-lgoinBox{
+				position: relative;
+				ul{
+					display: none;
+					position: absolute;
+					top: 40px;
+					right: 0px;
+					width: 100px;
+					z-index: 9;
+					box-shadow: 1px 2px 5px #5f5f5fa6;
+					a {
+						display:block;
+						transition: .3s;
+						background: #fff;
+						padding: 10px 20px;
+						border: 1px solid #ccc;
+						z-index: 99;
+						
+						&:hover{
+							background-color: #ccc;
+								
+						}
+					}
+				}
+			}
+		}
+			
+		.header-search{
+			display: flex;
+			& button, & input{
+				border: none;
+				background-color: #fff;
+				padding: 5px 10px;
+				:focus{
+					outline: none;
+				}
+			}
+			& button{
+				border-radius: 0 200px 200px 0;
+			}
+			& input{
+				border-radius: 200px 0  0 200px;
+			}
+		}
+	}
+	
+	
+
+}
+	
+        
+    
+
+//footer
+.footer{
+	background: $primary;
+	padding: 20px 0px;
+	.footer-content{
+		display: flex;
+		text-align: $font-align-c;
+		ul.ul-list-flex{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			li{
+				padding: 0px 8px;
+				border-right: 1px solid #ccc;
+			}
+		}
+	}
+}

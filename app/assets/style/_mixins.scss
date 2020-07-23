@@ -1,0 +1,53 @@
+// 客製化
+// 記不起來先行預備的
+// 專案經驗
+
+//平版
+@mixin pad{
+	@media (max-width: 768px){
+		@content;
+	}
+}
+
+//手機
+@mixin iphone{
+	@media (max-width: 568px){
+		@content;
+	}
+}
+
+// clearfix
+@mixin clearfix{
+	&::after{
+		content: "";
+		display: both;
+	}
+}
+
+// hideText
+@mixin hide-text{
+	text-indent: -9999px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+// .header h1 {
+// 	@include hide-text;
+// }
+
+
+// circle
+// @mixin circle($size,$bgcolor){
+// 	border-radius:50%;
+// 	height: $size;
+// 	width: $size;
+// 	font-size: $size / 3;
+// 	background: $bgcolor;
+// }
+
+// .box{
+// 	@include circle(30px,#ffffff)
+// }
+// .black{
+// 	@include circle(51px,#ffffff)
+// }
